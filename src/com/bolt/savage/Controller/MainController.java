@@ -1,5 +1,6 @@
 package com.bolt.savage.Controller;
 
+import com.bolt.savage.Model.DatabaseHelper;
 import com.bolt.savage.Model.Team;
 import com.bolt.savage.View.Item.TeamCellAdapter;
 import javafx.collections.FXCollections;
@@ -60,14 +61,15 @@ public class MainController implements EventHandler<MouseEvent> {
         if (event.getClickCount() == 2) {
             Parent root;
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/bolt/savage/View/FXML/TeamDetailView.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().
+                        getResource("/com/bolt/savage/View/FXML/TeamDetailView.fxml"));
                 root = loader.load();
 
                 TeamDetailController controller = loader.getController();
                 controller.setTeam((Team) listView.getSelectionModel().getSelectedItem());
 
                 Stage stage = new Stage();
-                stage.setTitle("Team View");
+                stage.setTitle(((Team) listView.getSelectionModel().getSelectedItem()).name);
                 stage.setScene(new Scene(root, 500, 700));
                 stage.show();
 
@@ -80,11 +82,8 @@ public class MainController implements EventHandler<MouseEvent> {
     }
 
     private void testConnection() throws SQLException {
-        String url = "jdbc:mysql://localhost/";
-        String user = "root";
-        String password = "";
 
-        Connection con = DriverManager.getConnection(url, user, password);
+        Connection con = DatabaseHelper.getConnectionInstance();
 
         String query = "select * from savage.TEAM";
 
