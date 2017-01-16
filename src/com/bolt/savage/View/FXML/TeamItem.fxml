@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+<HBox fx:id="teamCell" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="71.0" prefWidth="295.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+
+    <ImageView fx:id="teamFlag" fitHeight="70.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+        <HBox.margin>
+            <Insets left="14.0" />
+        </HBox.margin>
+    </ImageView>
+    <HBox>
+    <Label fx:id="teamName" prefHeight="70.0" prefWidth="220.0" text="Team Name">
+        <font>
+            <Font name="Avenir Next Regular" size="24.0"/>
+        </font>
+        <HBox.margin>
+            <Insets left="14.0" />
+        </HBox.margin>
+    </Label>
+    </HBox>
+</HBox>

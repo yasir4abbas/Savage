@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:controller="com.bolt.savage.Controller.TeamDetailController" maxHeight="-Infinity" maxWidth="-Infinity"
+      minHeight="-Infinity" minWidth="-Infinity" prefHeight="788.0" prefWidth="504.0"
+      style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+
+    <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="2.0" layoutY="44.0" onMouseClicked="#backAction">
+        <Image url="/resource/ic_back.png"/>
+    </ImageView>
+    <Label fx:id="teamName" layoutX="40.0" layoutY="40.0" text="Team Name">
+        <font>
+            <Font name="Hiragino Sans W0" size="36.0"/>
+        </font>
+    </Label>
+
+    <ListView fx:id="players" layoutX="-1.0" layoutY="332.0" prefHeight="454.0" prefWidth="504.0"
+              style="-fx-background-color: white;"/>
+
+    <Text fx:id="description" layoutX="109.0" layoutY="101.0"  wrappingWidth="300" text="Descripton"/>
+
+    <ImageView fx:id="teamFlag" fitHeight="54.0" fitWidth="62.0" layoutX="428.0" layoutY="34.0" pickOnBounds="true"
+               preserveRatio="true"/>
+
+    <Label layoutX="137.0" layoutY="211.0" text="Captain:"/>
+    <Label fx:id="captain" layoutX="237.0" layoutY="211.0" text="Label"/>
+
+    <Label layoutX="137.0" layoutY="239.0" text="Coach:"/>
+    <Label fx:id="coach" layoutX="237.0" layoutY="239.0" text="Label"/>
+
+    <Label layoutX="137.0" layoutY="295.0" text="Location:"/>
+    <Label fx:id="loc" layoutX="237.0" layoutY="295.0" text="Label"/>
+
+    <Label layoutX="137.0" layoutY="267.0" text="Stadiums:"/>
+    <Label fx:id="stadium" layoutX="237.0" layoutY="267.0" text="Label"/>
+</Pane>
