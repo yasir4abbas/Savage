@@ -56,7 +56,7 @@ public class MainController implements EventHandler<MouseEvent> {
     }
 
     @Override
-    public void handle(javafx.scene.input.MouseEvent event) {
+    public void handle(MouseEvent event) {
 
         if (event.getClickCount() == 2) {
             Parent root;
@@ -92,6 +92,7 @@ public class MainController implements EventHandler<MouseEvent> {
 
         while (set.next()) {
             Team team = new Team();
+            team.id = set.getInt("id");
             team.name = set.getString("name");
             team.flag = set.getString("flag");
             team.coach = set.getString("coach");

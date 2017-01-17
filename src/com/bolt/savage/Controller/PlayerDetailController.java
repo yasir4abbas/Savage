@@ -1,25 +1,44 @@
 package com.bolt.savage.Controller;
 
-import com.sun.org.omg.CORBA.Initializer;
+import com.bolt.savage.Model.Player;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import org.omg.CORBA.INITIALIZE;
+import javafx.scene.control.ListView;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 
-/**
- * Created by HUSSAIN on 16-Jan-17.
- */
+
 public class PlayerDetailController {
-    @FXML
-    private Label playerName;
-    @FXML
-    private Label playerSide;
-    @FXML
-    private Label playerRole;
 
-    void setInfo() {
-        playerName.setText("Full Name: ");
-        playerSide.setText("National Side: ");
-        playerRole.setText("Role: ");
+
+    @FXML
+    private ImageView playerImage;
+
+    @FXML
+    private ListView battingDetails;
+
+    @FXML
+    private Label name;
+
+    ObservableList<String> battingStats;
+
+    public void initialize() {
+        name.setText("Hisham");
+
+        battingStats = FXCollections.observableArrayList();
+        battingStats.add("Ali");
+        battingStats.add("Salman");
+        battingStats.add("Taimoor");
+        battingStats.add("Inzemam");
+
+        battingDetails.setItems(battingStats);
+
     }
 
+    public void setPlayer(Player player) {
+
+    }
 }

@@ -8,21 +8,27 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.geometry.Insets?>
 <HBox fx:id="teamCell" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-      prefHeight="71.0" prefWidth="295.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+      prefHeight="32.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
 
-    <ImageView fx:id="teamFlag" fitHeight="70.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fx:id="teamFlag" fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
         <HBox.margin>
             <Insets left="14.0" />
         </HBox.margin>
     </ImageView>
     <HBox>
-    <Label fx:id="teamName" prefHeight="70.0" prefWidth="220.0" text="Team Name">
+    <Label fx:id="teamName" prefHeight="70.0" prefWidth="480.0" text="Team Name">
         <font>
-            <Font name="Avenir Next Regular" size="24.0"/>
+            <Font name="Avenir Next Regular" size="16.0"/>
         </font>
         <HBox.margin>
-            <Insets left="14.0" />
+            <Insets left="24.0" />
         </HBox.margin>
     </Label>
+        <ImageView fitHeight="32.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+            <HBox.margin>
+                <Insets right="32.0" />
+            </HBox.margin>
+            <Image url="/resource/ic_right.png"/>
+        </ImageView>
     </HBox>
 </HBox>

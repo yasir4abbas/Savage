@@ -29,4 +29,8 @@ public class DatabaseHelper {
     private  static void setConnection() throws SQLException {
         CONNECTION = DriverManager.getConnection(URL, USER, PASSWORD);
     }
+
+    public static void getTeams() {
+
+    }
 }
