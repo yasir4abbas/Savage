@@ -28,7 +28,7 @@ public class TeamCellAdapter extends ListCell<Team> {
         }
     }
 
-    public class TeamCell {
+    protected class TeamCell {
         @FXML
         HBox teamCell;
         @FXML

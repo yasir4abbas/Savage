@@ -37,7 +37,7 @@ public class MainController implements EventHandler<MouseEvent> {
         list = FXCollections.observableArrayList();
 
         try {
-            testConnection();
+            fetchTeams();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -81,8 +81,7 @@ public class MainController implements EventHandler<MouseEvent> {
         }
     }
 
-    private void testConnection() throws SQLException {
-
+    private void fetchTeams() throws SQLException {
         Connection con = DatabaseHelper.getConnectionInstance();
 
         String query = "select * from savage.TEAM";

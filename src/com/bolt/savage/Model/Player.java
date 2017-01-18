@@ -5,4 +5,14 @@ package com.bolt.savage.Model;
  */
 public class Player {
     public String name;
+    public String side;
+    public String role;
+
+    public String image;
+
+    public boolean batting;
+    public boolean bowling;
+
+    public int testBatting;
+    public int testBowling;
 }

@@ -4,9 +4,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/**
- * Created by yasir on 16/01/2017.
- */
 public class DatabaseHelper {
 
     private static String URL = "jdbc:mysql://localhost/";
@@ -28,9 +25,5 @@ public class DatabaseHelper {
 
     private  static void setConnection() throws SQLException {
         CONNECTION = DriverManager.getConnection(URL, USER, PASSWORD);
-    }
-
-    public static void getTeams() {
-
     }
 }

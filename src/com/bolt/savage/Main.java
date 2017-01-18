@@ -1,4 +1,4 @@
-package com.bolt.savage.View.UI;
+package com.bolt.savage;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

@@ -2,6 +2,7 @@ package com.bolt.savage.Controller;
 
 import com.bolt.savage.Model.DatabaseHelper;
 import com.bolt.savage.Model.Player;
+import com.bolt.savage.View.Item.PlayerCellAdapter;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
@@ -11,14 +12,15 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.text.Text;
 import com.bolt.savage.Model.Team;
-import com.bolt.savage.View.UI.Main;
+import com.bolt.savage.Main;
 import javafx.stage.Stage;
+import javafx.util.Callback;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -36,9 +38,6 @@ public class TeamDetailController implements EventHandler<MouseEvent> {
 
     @FXML
     private ImageView teamFlag;
-
-    @FXML
-    private Text description;
     @FXML
     private Label captain;
     @FXML
@@ -69,9 +68,6 @@ public class TeamDetailController implements EventHandler<MouseEvent> {
         Image image = new Image("resource/" + team.flag);
         teamFlag.setImage(image);
 
-        description.setText("The Australian national team represents the country" +
-                "of australia in international cricket.");
-
         captain.setText("Steve Smith");
         coach.setText(team.coach);
         loc.setText("Australia");
@@ -87,7 +83,12 @@ public class TeamDetailController implements EventHandler<MouseEvent> {
         }
 
         players.setItems(playerList);
-
+        players.setCellFactory(new Callback<ListView, ListCell>() {
+            @Override
+            public ListCell call(ListView param) {
+                return new PlayerCellAdapter();
+            }
+        });
     }
 
     @Override
@@ -128,6 +129,15 @@ public class TeamDetailController implements EventHandler<MouseEvent> {
         while (set.next()) {
             Player player = new Player();
             player.name = set.getString("name");
+            player.role = set.getString("role");
+            player.side = set.getString("side");
+
+            player.batting = set.getBoolean("batting");
+            player.bowling = set.getBoolean("bowling");
+
+            player.testBatting = set.getInt("BATTING_STAT_id");
+            player.testBowling = set.getInt("BOWLING_STAT_id");
+
             playerList.add(player);
         }
 

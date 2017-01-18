@@ -8,26 +8,105 @@
 <Pane fx:controller="com.bolt.savage.Controller.PlayerDetailController"
       xmlns:fx="http://javafx.com/fxml">
 
-   <ImageView fx:id="playerImage" layoutY="86.0" layoutX="3.0" fitHeight="30" fitWidth="30" >
-   </ImageView>
-   <ListView fx:id="battingDetails" layoutX="3.0" layoutY="200.0" prefHeight="700.0" prefWidth="500.0">
-   </ListView>
+    <ImageView fx:id="playerImage" layoutY="86.0" layoutX="3.0" fitHeight="30" fitWidth="30">
+    </ImageView>
 
-   <Label layoutX="300" layoutY="60" text="Full Name:">
-   </Label>
-   <Label fx:id="name" layoutX="300" layoutY="75" text="Natasha Hawae">
-   </Label>
 
-   <Label layoutX="300" layoutY="100" text="National Side:">
-   </Label>
-   <Label fx:id="team" layoutX="300" layoutY="115" text="Pakistan">
-   </Label>
 
-   <Label layoutX="300" layoutY="140" text="Role:">
-   </Label>
-   <Label fx:id="role" layoutX="300" layoutY="155" text="Batsman">
-   </Label>
+    <Label layoutX="300" layoutY="60" text="Full Name:">
+    </Label>
 
+    <Label layoutX="300" layoutY="100" text="National Side:">
+    </Label>
+    <Label fx:id="team" layoutX="300" layoutY="115" text="Pakistan">
+    </Label>
+
+    <Label layoutX="300" layoutY="140" text="Role:">
+    </Label>
+    <Label fx:id="role" layoutX="300" layoutY="155" text="Batsman">
+    </Label>
+
+
+
+    <Pane fx:id="battingPane" layoutY="120.0" layoutX="3.0">
+
+        <Label text="BATTING" layoutX="30" layoutY="50"></Label>
+
+        <Label text="50s:" layoutX="50" layoutY="65"></Label>
+        <Label text="Average:" layoutX="300" layoutY="65"></Label>
+
+        <Label fx:id="fifty" text="20" layoutX="80" layoutY="65"></Label>
+        <Label fx:id="average" text="20" layoutX="370" layoutY="65"></Label>
+
+        <Label text="100s:" layoutX="50" layoutY="80"></Label>
+        <Label text="Highest Score:" layoutX="300" layoutY="80"></Label>
+
+        <Label fx:id="hundred" text="20" layoutX="100" layoutY="80"></Label>
+        <Label fx:id="highestscore" text="215" layoutX="400" layoutY="80"></Label>
+
+        <Label text="Caught Taking:" layoutX="50" layoutY="95"></Label>
+        <Label text="Runs:" layoutX="300" layoutY="95"></Label>
+
+        <Label fx:id="caughttaking" text="0" layoutX="160" layoutY="95"></Label>
+        <Label fx:id="runs" text="0" layoutX="400" layoutY="95"></Label>
+
+        <Label text="6s:" layoutX="50" layoutY="110"></Label>
+        <Label text="Not Outs:" layoutX="300" layoutY="110"></Label>
+
+        <Label fx:id="sixes" text="20" layoutX="70" layoutY="110"></Label>
+        <Label fx:id="notouts" text="0" layoutX="400" layoutY="110"></Label>
+
+        <Label text="4s:" layoutX="50" layoutY="125"></Label>
+        <Label text="Innings:" layoutX="300" layoutY="125"></Label>
+
+        <Label fx:id="fours" text="20" layoutX="70" layoutY="125"></Label>
+        <Label fx:id="innings" text="92" layoutX="400" layoutY="125"></Label>
+
+        <Label text="matches:" layoutX="300" layoutY="140"></Label>
+
+        <Label fx:id="matches" text="50" layoutX="400" layoutY="140"></Label>
+    </Pane>
+
+    <Pane fx:id="bowlingPane" layoutY="300.0" layoutX="3.0">
+
+        <Label text="BOWLING" layoutX="30" layoutY="50"></Label>
+
+        <Label text="Runs:" layoutX="50" layoutY="65"></Label>
+        <Label text="Balls:" layoutX="300" layoutY="65"></Label>
+
+        <Label fx:id="runsBow" text="20" layoutX="80" layoutY="65"></Label>
+        <Label fx:id="balls" text="20" layoutX="370" layoutY="65"></Label>
+
+        <Label text="Matches:" layoutX="50" layoutY="80"></Label>
+        <Label text="Innings:" layoutX="300" layoutY="80"></Label>
+
+        <Label fx:id="matchesBow" text="20" layoutX="100" layoutY="80"></Label>
+        <Label fx:id="inningsBow" text="215" layoutX="400" layoutY="80"></Label>
+
+        <Label text="Wickets:" layoutX="50" layoutY="95"></Label>
+        <Label text="best Inning:" layoutX="300" layoutY="95"></Label>
+
+        <Label fx:id="wickets" text="0" layoutX="160" layoutY="95"></Label>
+        <Label fx:id="bestInn" text="0" layoutX="400" layoutY="95"></Label>
+
+        <Label text="best Match:" layoutX="50" layoutY="110"></Label>
+        <Label text="Average:" layoutX="300" layoutY="110"></Label>
+
+        <Label fx:id="bestMatch" text="20" layoutX="70" layoutY="110"></Label>
+        <Label fx:id="averageBow" text="0" layoutX="400" layoutY="110"></Label>
+
+        <Label text="Economy Rate:" layoutX="50" layoutY="125"></Label>
+        <Label text="4 wicket haul:" layoutX="300" layoutY="125"></Label>
+
+        <Label fx:id="ecc" text="20" layoutX="70" layoutY="125"></Label>
+        <Label fx:id="fourW" text="92" layoutX="400" layoutY="125"></Label>
+
+        <Label text="5 wicket haul:" layoutX="300" layoutY="140"></Label>
+        <Label text="10 wicket haul:" layoutX="300" layoutY="140"></Label>
+
+        <Label fx:id="fiveW" text="50" layoutX="400" layoutY="140"></Label>
+        <Label fx:id="tenW" text="50" layoutX="400" layoutY="140"></Label>
+    </Pane>
 
 </Pane>
 

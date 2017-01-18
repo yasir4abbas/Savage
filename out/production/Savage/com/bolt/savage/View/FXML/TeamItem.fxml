@@ -15,15 +15,17 @@
             <Insets left="14.0" />
         </HBox.margin>
     </ImageView>
+
     <HBox>
-    <Label fx:id="teamName" prefHeight="70.0" prefWidth="480.0" text="Team Name">
-        <font>
-            <Font name="Avenir Next Regular" size="16.0"/>
-        </font>
-        <HBox.margin>
-            <Insets left="24.0" />
-        </HBox.margin>
-    </Label>
+        <Label fx:id="teamName" prefHeight="70.0" prefWidth="480.0" text="Team Name">
+            <font>
+                <Font name="Avenir Next Regular" size="16.0"/>
+            </font>
+            <HBox.margin>
+                <Insets left="24.0" />
+            </HBox.margin>
+        </Label>
+
         <ImageView fitHeight="32.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
             <HBox.margin>
                 <Insets right="32.0" />
